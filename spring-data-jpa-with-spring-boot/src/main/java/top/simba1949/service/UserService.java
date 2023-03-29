@@ -3,6 +3,7 @@ package top.simba1949.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -69,5 +70,27 @@ public class UserService {
         Sort sort = typedSort.by(UserEntity::getGmtCreate).descending()
                 .and(typedSort.by(UserEntity::getBirthday).ascending());
         return userRepository.findAll(sort);
+    }
+
+    public UserEntity findUserEntityById(long id){
+        return userRepository.findUserEntityById(id);
+    }
+
+    public List<UserEntity> findUserEntitiesByCreator(String creator){
+        return userRepository.findUserEntitiesByCreator(creator);
+    }
+
+    @Transactional(rollbackFor = Throwable.class)
+    public int updateUserEntity(String username,long id){
+        return userRepository.updateUserEntity(username, id);
+    }
+
+    @Transactional(rollbackFor = Throwable.class)
+    public int deleteUserEntityById(long id){
+        return userRepository.deleteUserEntityById(id);
+    }
+    @Transactional(rollbackFor = Throwable.class)
+    public int insertUserEntityBySelect(long id){
+        return userRepository.insertUserEntityBySelect(id);
     }
 }

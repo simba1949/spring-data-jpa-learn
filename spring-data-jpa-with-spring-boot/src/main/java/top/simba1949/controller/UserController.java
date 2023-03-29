@@ -63,6 +63,31 @@ public class UserController {
         return userService.sortAll();
     }
 
+    @GetMapping("findUserEntityById")
+    public UserEntity findUserEntityById(long id){
+        return userService.findUserEntityById(id);
+    }
+
+    @GetMapping("findUserEntitiesByCreator")
+    public List<UserEntity> findUserEntitiesByCreator(String creator){
+        return userService.findUserEntitiesByCreator(creator);
+    }
+
+    @GetMapping("updateUserEntity")
+    public int updateUserEntity(String username,long id){
+        return userService.updateUserEntity(username, id);
+    }
+
+    @GetMapping("deleteUserEntityById")
+    public int deleteUserEntityById(long id){
+        return userService.deleteUserEntityById(id);
+    }
+
+    @GetMapping("insertUserEntityBySelect")
+    public int insertUserEntityBySelect(long id){
+        return userService.insertUserEntityBySelect(id);
+    }
+
     // =============================================
     // ================ private ====================
     // =============================================
