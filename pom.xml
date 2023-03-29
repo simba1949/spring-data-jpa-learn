@@ -11,6 +11,7 @@
     <modules>
         <module>spring-data-jpa-with-xml-config</module>
         <module>spring-data-jpa-with-java-bean-config</module>
+        <module>spring-data-jpa-with-spring-boot</module>
     </modules>
 
     <properties>
