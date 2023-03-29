@@ -58,6 +58,11 @@ public class UserController {
         return userService.list();
     }
 
+    @GetMapping("sortAll")
+    public List<UserEntity> sortAll(){
+        return userService.sortAll();
+    }
+
     // =============================================
     // ================ private ====================
     // =============================================
