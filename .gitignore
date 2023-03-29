@@ -1,0 +1,3 @@
+# Project exclude paths
+/spring-data-jpa-with-java-bean-config/target/
+/spring-data-jpa-with-xml-config/target/
