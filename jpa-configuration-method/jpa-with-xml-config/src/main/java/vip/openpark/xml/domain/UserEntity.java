@@ -1,4 +1,4 @@
-package vip.openpark.domain;
+package vip.openpark.xml.domain;
 
 import jakarta.persistence.*;
 import lombok.*;

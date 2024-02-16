@@ -1,8 +1,8 @@
-package vip.openpark.repository;
+package vip.openpark.java.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import vip.openpark.domain.UserEntity;
+import vip.openpark.java.domain.UserEntity;
 
 /**
  * @author anthony

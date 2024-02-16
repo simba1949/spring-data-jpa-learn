@@ -8,14 +8,14 @@
      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- 用于整合 JPA，交给 spring 容器管理，相当于 @EnableJpaRepositories  -->
-    <jpa:repositories base-package="vip.openpark.repository"
+    <jpa:repositories base-package="vip.openpark.xml.repository"
                       entity-manager-factory-ref="entityManagerFactory"
                       transaction-manager-ref="jpaTransactionManager"/>
 
     <!-- 配置数据源和连接池 -->
     <bean name="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://120.48.47.7:3306/example?characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai"/>
+        <property name="url" value="jdbc:mysql://172.17.35.120/example?characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai"/>
         <property name="username" value="root"/>
         <property name="password" value="123456"/>
     </bean>
@@ -28,10 +28,11 @@
                 <property name="generateDdl" value="true"/>
                 <!-- 是否展示SQL -->
                 <property name="showSql" value="true"/>
+                <property name="database" value="MYSQL"/>
             </bean>
         </property>
         <!-- 实体类的包 -->
-        <property name="packagesToScan" value="vip.openpark.domain"/>
+        <property name="packagesToScan" value="vip.openpark.xml.domain"/>
         <property name="dataSource" ref="druidDataSource"/>
     </bean>
 

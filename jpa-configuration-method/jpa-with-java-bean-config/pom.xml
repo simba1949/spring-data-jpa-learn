@@ -35,23 +35,16 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
-            <version>3.2.2</version>
+            <version>${spring-data-jpa.version}</version>
         </dependency>
         <!-- spring-data-jpa 只是对JPA接口的抽象规范，还需要添加具体的实现（如：Hibernate/OpenJPA/EclipseLink） -->
         <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>6.4.4.Final</version>
+            <version>${hibernate.version}</version>
         </dependency>
 
-        <!-- javax 注解支持 -->
-        <!-- https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api -->
-        <dependency>
-            <groupId>jakarta.persistence</groupId>
-            <artifactId>jakarta.persistence-api</artifactId>
-            <version>3.2.0-M1</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -75,14 +68,12 @@
             <version>5.10.2</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
         <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.12.1</version>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.14</version>
         </dependency>
-
     </dependencies>
 
     <build>

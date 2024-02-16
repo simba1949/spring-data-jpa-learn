@@ -17,5 +17,8 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hibernate.version>6.4.1.Final</hibernate.version>
+        <spring-data-jpa.version>3.2.2</spring-data-jpa.version>
+        <spring-boot.version>3.2.2</spring-boot.version>
     </properties>
 </project>
